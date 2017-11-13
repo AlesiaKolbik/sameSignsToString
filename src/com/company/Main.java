@@ -8,12 +8,14 @@ public class Main {
         for (int i = 1; i < sourceText.length(); i++) {
             if (sourceText.charAt(i) == sourceText.charAt(i - 1))
                 counter++;
-        }
-            if(counter>=4)
-                System.out.print("Есть пять одинаковых знаков подряд.");
-            else if(counter<=4)
-                System.out.print("Нет пяти одинаковых знаков подряд.");
             else
-                counter=0;
+                counter = 0;
+            if (counter >= 4)
+                break;
+        }
+        if (counter >= 4)
+            System.out.print("Есть пять одинаковых знаков подряд.");
+        else if (counter <= 4)
+            System.out.print("Нет пяти одинаковых знаков подряд.");
     }
 }
